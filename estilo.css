@@ -1,0 +1,13 @@
+.container{
+    margin-top: 5em;
+}
+
+#titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span{
+    color:red;
+}
