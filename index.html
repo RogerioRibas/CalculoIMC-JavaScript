@@ -7,6 +7,8 @@
     <!-- Css Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -14,7 +16,8 @@
     <div class="container">
 
         <form id="form">
-            <h2 id="titulo" class="display-4">Calcule seu IMC</h2>
+            <span id="titulo" class="display-4">Calcule seu IMC <img id="coracaoImg"src="coracao.png"></span>
+            
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input  class="form-control" type="text" id="nome" maxlength="20" placeholder="Digite seu nome" />
@@ -28,13 +31,28 @@
                 <label for="peso">Peso</label><span class="invisible"> - Peso inválido.</span>
                 <input required class="form-control" type="text" id="peso" placeholder="Digite seu peso, sem pontos ou vírgulas. Ex.: 85" />
             </div>
-            
-            
 
-            <button type="submit" id="botaoCalcula" class="btn btn-info btn-lg btn-block">Calcular</button>
+            <button type="submit" id="botaoCalcula" class="btn btn-outline-info btn-lg btn-block">CALCULAR</button>
         </form>
-
+       
+        <div class="divFlex">
+        <div id="divResultado" class="d-none"></div>
+       
+        <div id="divDropdown"class="dropdown d-none">
+            <button type="button" class="btn btn-info dropbtn">O que pode acontecer ?</button>
+            <div class="dropdown-content">
+              <p id="dropResultado1"></p>
+              <p id="dropResultado2"></p>
+              <p id="dropResultado3"></p>
+            </div>
+          </div>
+        </div>
+    
     </div>
+    
+    <button type="button" id="botaoVoltar" class="btn btn-outline-info d-none">Refazer Teste</button>
+
+
     <!-- JavaScrip, Jquery - Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

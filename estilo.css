@@ -1,5 +1,6 @@
 .container{
     margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 #titulo{
@@ -8,6 +9,81 @@
     justify-content: center;
 }
 
-span{
-    color:red;
+#botaoVoltar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+}
+
+#botaoCalcula{
+    transition: 1s;
+    margin-top: 3rem;    
+}
+
+.divFlex{
+display: flex;
+justify-content: space-between;
+}
+
+#coracaoImg{
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+}
+
+
+.dropbtn {
+
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 2px 8px 16px 2px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: .5em;
+    margin-top: .5em;
+}
+
+.dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: 4s;
+}
+
+.dropdown:hover .dropbtn {
+    transition: 4s;
+}
+
+
+@media (max-width: 575.98px) {
+    #coracaoImg{
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 780.00px) {
+    #divDropdown{
+        display: none;
+    }
 }
