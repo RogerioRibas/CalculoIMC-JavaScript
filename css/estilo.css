@@ -1,6 +1,7 @@
+/*** Layout página ***/
 .container{
     margin-top: 5em;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
 }
 
 #titulo{
@@ -32,21 +33,31 @@ justify-content: space-between;
     margin-left: 1rem;
 }
 
+@media (max-width: 575.98px) {
+    #coracaoImg{
+        display: none;
+    }
+}
 
+
+/**** Dropdown ****/
 .dropbtn {
-
     padding: 16px;
     font-size: 16px;
     border: none;
     border-radius: 7px;
 }
 
-
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+@media (min-width: 576px) and (max-width: 780.00px) {
+    #divDropdown{
+        display: none;
+    }
+}
 
 .dropdown-content {
     display: none;
@@ -73,17 +84,4 @@ justify-content: space-between;
 
 .dropdown:hover .dropbtn {
     transition: 4s;
-}
-
-
-@media (max-width: 575.98px) {
-    #coracaoImg{
-        display: none;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 780.00px) {
-    #divDropdown{
-        display: none;
-    }
 }
