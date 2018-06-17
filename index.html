@@ -10,7 +10,6 @@
     <!--Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
 </head>
 
 <body>
@@ -18,6 +17,19 @@
 
         <form id="form">
             <span id="titulo" class="display-4">Calcule seu IMC <img id="coracaoImg" src="images/coracao.png"></span>          
+               
+            <!--Divs com Mensagens de erro. Ocultas por padrão.-->
+            <div class="alert alert-danger alert-dismissible d-none" id="msgErroNome">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>               
+            </div>
+            <div class="alert alert-danger alert-dismissible d-none" id="msgErroAltura">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>               
+            </div>
+            <div class="alert alert-danger alert-dismissible d-none" id="msgErroPeso">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>               
+            </div>
+
+            <!--Inicio dos campos do form-->
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input  class="form-control" type="text" id="nome" maxlength="20" placeholder="Digite seu nome" />
@@ -33,6 +45,7 @@
             <button type="submit" id="botaoCalcula" class="btn btn-outline-info btn-lg btn-block">CALCULAR</button>
         </form>
        
+        <!--Div do Dropdown-->
         <div class="divFlex">
             <div id="divResultado" class="d-none"></div>       
                 <div id="divDropdown"class="dropdown d-none">
@@ -48,6 +61,7 @@
     </div><!--/Div Container-->
     
     <button type="button" id="botaoVoltar" class="btn btn-outline-info d-none">Refazer Teste</button>
+
 
     <!-- JavaScrip, Jquery - Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

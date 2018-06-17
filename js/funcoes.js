@@ -1,48 +1,64 @@
 // Funções de validação
 function validaAltura(altura){
   
-    if(altura == null || altura == ""){
-        alert("O campo altura precisa ser preenchido.")
+    var msgErro = document.getElementById("msgErroAltura")
+
+    if(altura == null || altura == ""){      
+        msgErro.classList.remove("d-none")
+        document.getElementById("msgErroAltura").innerHTML="O campo altura precisa ser preenchido."
         return false;
     
     }else if(altura > 300){
-        alert("A altura máxima é de 3.00 metros ( 300 cm.)")
+        msgErro.classList.remove("d-none")
+        document.getElementById("msgErroAltura").innerHTML="A altura máxima é de 3.00 metros ( 300 cm.)"
         return false ;
     
     }else if(isNaN(altura)){
-        alert("Digite sua altura real, sem pontos e sem vírgulas. Ex.: 175 ( 1,75m).")
+        msgErro.classList.remove("d-none")
+        document.getElementById("msgErroAltura").innerHTML="Digite sua altura real, sem pontos e sem vírgulas. Ex.: 175 ( 1,75m)."
         return false;
     
     }else{
+        msgErro.classList.add("d-none")
         return true;
     }
 }
 
 function validaNome(nome){
   
+    var msgErro = document.getElementById("msgErroNome")
+
     if(nome == null || nome == ""){
-        alert("O campo nome precisa ser preenchido.")
+        msgErro.classList.remove("d-none")
+        document.getElementById("msgErroNome").innerHTML="O campo nome precisa ser preenchido."
         return false;
     }else{
+        msgErro.classList.add("d-none")
         return true;
     }
 }
 
 function validaPeso(peso){
    
+    var msgErro = document.getElementById("msgErroPeso")
+
     if (peso == null || peso == "") {
-        alert("O campo Peso precisa ser preenchido.")
+        msgErro.classList.remove("d-none")
+        document.getElementById("msgErroPeso").innerHTML="O campo Peso precisa ser preenchido."
          return false;
     
     }else if(peso >= 300){
-         alert("O peso máximo é de 300 kilos.")
+        msgErro.classList.remove("d-none")
+        document.getElementById("msgErroPeso").innerHTML="O peso máximo é de 300 kilos."
          return false;
     
     }else if(isNaN(peso)){
-         alert("Digite seu peso real, sem pontos e sem vírgulas. Ex.: 85.")
+        msgErro.classList.remove("d-none")
+        document.getElementById("msgErroPeso").innerHTML="Digite seu peso real, sem pontos e sem vírgulas. Ex.: 85."
          return false;
     
     }else{
+        msgErro.classList.add("d-none")
         return true;
     }
 }

@@ -39,6 +39,10 @@ justify-content: space-between;
     }
 }
 
+.msgErro{
+    margin-top: 1rem;
+}
+
 
 /**** Dropdown ****/
 .dropbtn {

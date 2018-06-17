@@ -23,4 +23,13 @@ botaoVoltar.addEventListener("click", function(event) {
     //Oculta o botão de Refazer Teste
     botaoVoltar.classList.add("d-none")
 
+    //Oculta a mensagem de erro da pesquisa anterior
+    var msgErroNome = document.getElementById("msgErroNome")
+    var msgErroAltura = document.getElementById("msgErroAltura")
+    var msgErroPeso = document.getElementById("msgErroPeso")
+    msgErroNome.classList.add("d-none")
+    msgErroAltura.classList.add("d-none")
+    msgErroPeso.classList.add("d-none")
+
+
 });
